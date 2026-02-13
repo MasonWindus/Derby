@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Derby Game</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="game-layout">
+    <header class="top-strip">
+      <div><strong>Game:</strong> <span id="game-name">-</span></div>
+      <div><strong>Game ID:</strong> <span id="game-id">-</span></div>
+      <div><strong>Round:</strong> <span id="round">-</span></div>
+      <div><strong>Phase:</strong> <span id="phase">-</span></div>
+      <div><strong>Pot:</strong> <span id="pot">-</span></div>
+      <div><strong>Turn:</strong> <span id="turn">-</span></div>
+      <div><strong>Last Roll:</strong> <span id="last-roll">-</span></div>
+    </header>
+
+    <div class="game-grid">
+      <section class="board card">
+        <h2>Track</h2>
+        <div class="track-key">
+          <span><em>Left:</em> scratch zone (4 shared holes)</span>
+          <span><em>Center line:</em> starting gate</span>
+          <span><em>Right line:</em> finish</span>
+        </div>
+        <div id="track"></div>
+      </section>
+
+      <aside class="side-stack">
+        <section class="players card">
+          <h2>Players</h2>
+          <div id="players-list"></div>
+          <button id="start-btn" class="primary">Start Game</button>
+        </section>
+
+        <section class="you card">
+          <h2>You</h2>
+          <div id="you-panel"></div>
+          <button id="roll-btn" class="primary">Roll</button>
+        </section>
+
+        <section class="logs card">
+          <h2>Events</h2>
+          <div id="logs"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <div id="fx-layer"></div>
+  <script src="./game.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Derby</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="home">
+  <main class="panel">
+    <h1>Derby</h1>
+    <p class="subtitle">Create a game or join an existing one.</p>
+
+    <section class="card">
+      <h2>Create Game</h2>
+      <form id="create-form">
+        <label>Player Name <input name="playerName" required maxlength="24" /></label>
+        <label>Game Name <input name="gameName" required maxlength="40" value="Friday Derby" /></label>
+        <label>Players <input name="maxPlayers" type="number" min="2" max="10" value="6" required /></label>
+        <label>Starting Balance ($) <input name="startingBalance" type="number" min="1" step="0.25" value="20" required /></label>
+        <label>Standard Bet ($) <input name="standardBet" type="number" min="0.01" step="0.01" value="0.25" required /></label>
+        <button type="submit">Create</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Join Game</h2>
+      <form id="join-form">
+        <label>Player Name <input name="playerName" required maxlength="24" /></label>
+        <label>Game ID <input name="gameId" required maxlength="32" /></label>
+        <button type="submit">Join</button>
+      </form>
+    </section>
+
+    <p id="status" class="status"></p>
+  </main>
+  <script src="./lobby.js"></script>
+</body>
+</html>

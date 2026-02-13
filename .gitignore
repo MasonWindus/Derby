@@ -1,0 +1,4 @@
+api/data
+api/vendor
+api/.htaccess
+api/composer.*
